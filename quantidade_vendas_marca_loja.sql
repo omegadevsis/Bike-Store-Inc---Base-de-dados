@@ -1,4 +1,4 @@
-select s.store_name, b.brand_name, sum(i.quantity)
+select s.store_name, b.brand_name, count(i.quantity)
 from order_items i
 inner join orders o on i.order_id = o.order_id
 inner join products p on i.product_id = p.product_id
