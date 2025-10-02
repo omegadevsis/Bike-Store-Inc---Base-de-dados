@@ -1,4 +1,4 @@
 select *
-from customers c
-left join orders o on c.customer_id = o.customer_id
+from order_items o
+right join products p on o.product_id = p.product_id
 where o.order_id is NULL
